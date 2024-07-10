@@ -123,7 +123,7 @@ def handleDept(request):
 
                 if department is None:
                     return JsonResponse({
-                        'message':'department does not exists!!'
+                        'message':'No department exists!!'
                     })  
                 
                 department.lead=lead
@@ -132,7 +132,7 @@ def handleDept(request):
                 department.save()
 
                 return JsonResponse({
-                    'message':'edited successful!!'
+                    'message':'updated successful!!'
                 })
             
             employee = Employee.objects.filter(id=lead).first()
@@ -146,7 +146,7 @@ def handleDept(request):
 
 
             return JsonResponse({
-                'message':'record saved successful!!'
+                'message':'Department saved successful!!'
             })
 
                  
